@@ -30,55 +30,58 @@
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <li><a class="dropdown-item" href="./#.html">Senate</a></li>
-                        <li><a class="dropdown-item" href="./house.html">House</a></li>
+                        <li><a class="dropdown-item" href="./house.html">House of Representatives</a></li>
                     </ul>
                 </div>
             </div>
         </div>
         <a class="mail" href="mailto:info@datainsight.net">info@DataInsightGroup.net</a>
     </nav>
+    <div class="section-tables">
+        <h1>Senate</h1>
+        <p>First convened in 1789, the composition and powers of the Senate are established in Article One of the U.S.
+            Constitution. Each state is represented by two senators, regardless of population, who serve staggered
+            six-year
+            terms. The Senate has several exclusive powers not granted to the House, including consenting to treaties as
+            a
+            precondition to their ratification and consenting to or confirming appointments of Cabinet secretaries,
+            federal
+            judges, other federal executive officials, military officers, regulatory officials, ambassadors, and other
+            federal uniformed officers, as well as trial of federal officials impeached by the House.</p>
 
-    <h1>Senate</h1>
-    <p>First convened in 1789, the composition and powers of the Senate are established in Article One of the U.S.
-        Constitution. Each state is represented by two senators, regardless of population, who serve staggered six-year
-        terms. The Senate has several exclusive powers not granted to the House, including consenting to treaties as a
-        precondition to their ratification and consenting to or confirming appointments of Cabinet secretaries, federal
-        judges, other federal executive officials, military officers, regulatory officials, ambassadors, and other
-        federal uniformed officers, as well as trial of federal officials impeached by the House.</p>
 
-
-    <form action="">
-        <fieldset class="d-flex align-items-center flex-wrap">
-            <div class="filters d-flex align-items-center">
-                <label class="form-check form-switch">Republican
-                    <input type="checkbox" class="form-check-input" role="switch" value="R">
-                </label>
-                <label class="form-check form-switch">Democrat
-                    <input type="checkbox" class="form-check-input" role="switch" value="D">
-                </label>
-                <label class="form-check form-switch"> Independent
-                    <input type="checkbox" class="form-check-input" role="switch" value="ID">
-                </label>
-            </div>
-            <div class="p-3">
-                <select name='states'>
-                    <option value="all">All</option>
-                </select>
-            </div>
-        </fieldset>
-    </form>
-    <table class="table table-hover table-striped table-responsive">
-        <thead>
-            <th>full name</th>
-            <th>party</th>
-            <th>state</th>
-            <th>years in office</th>
-            <th>votes with party</th>
-        </thead>
-        <tbody id="members-politician">
-        </tbody>
-    </table>
-
+        <form action="">
+            <fieldset class="d-flex align-items-center flex-wrap">
+                <div class="filters d-flex align-items-center">
+                    <label class="form-check form-switch">Republican
+                        <input type="checkbox" class="form-check-input" role="switch" value="R">
+                    </label>
+                    <label class="form-check form-switch">Democrat
+                        <input type="checkbox" class="form-check-input" role="switch" value="D">
+                    </label>
+                    <label class="form-check form-switch"> Independent
+                        <input type="checkbox" class="form-check-input" role="switch" value="ID">
+                    </label>
+                </div>
+                <div class="p-3">
+                    <select name='states'>
+                        <option value="all">All</option>
+                    </select>
+                </div>
+            </fieldset>
+        </form>
+        <table class="table table-hover table-striped table-responsive">
+            <thead>
+                <th>full name</th>
+                <th>party</th>
+                <th>state</th>
+                <th>years in office</th>
+                <th>votes with party</th>
+            </thead>
+            <tbody id="members-politician">
+            </tbody>
+        </table>
+    </div>
     <footer>
         <p> © 2022 Data Insight Group | All Rights reserverd.</p>
     </footer>

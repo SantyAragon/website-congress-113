@@ -21,6 +21,9 @@ body {
         text-align: center;
         width: 100%;
     }
+    .section-tables{
+        padding:0px 1rem;
+    }
     #congress{
         margin: 1rem 0px;
     }
@@ -50,7 +53,7 @@ nav a {
 
 nav img {
     width: 10vh;
-    margin-right: 1rem;
+    margin-left: 1.5rem;
 }
 
 .dropdown-toggle {

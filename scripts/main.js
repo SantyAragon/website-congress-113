@@ -94,7 +94,7 @@ form.addEventListener("change", () => {
 
     const filtrarPartidos = (array) => {
 
-        if (allChecks.length === 0 || allChecks.length === 3) {
+        if (allChecks.length === 0) {
             renderNames(array)
         } else {
             let aux = [];
