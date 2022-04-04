@@ -14,19 +14,22 @@ body {
     .mail {
         display: none;
     }
-    section{
+
+    section {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center !important;
         text-align: center;
         width: 100%;
     }
-    .section-tables{
-        padding:0px 1rem;
-    }
-    #congress{
+
+    #congress {
         margin: 1rem 0px;
     }
+}
+
+.section-tables {
+    padding: 0px 1rem;
 }
 
 .bg-light {
