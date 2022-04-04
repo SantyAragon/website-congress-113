@@ -1,0 +1,78 @@
+body {
+    min-height: 100vh;
+    color: #0c1a3f;
+    margin: 0;
+    padding: 0;
+
+}
+
+.bg-light {
+    /* color: white; */
+    background-color: #d61f49 !important;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mail {
+    padding-right: 2rem;
+}
+
+nav a {
+    color: white !important;
+    align-items: center;
+    display: flex;
+}
+
+nav img {
+    width: 10vh;
+    margin-right: 1rem;
+}
+
+.dropdown-toggle {
+    border: none;
+    color: white !important;
+}
+
+.dropdown-menu a {
+    border: none !important;
+    color: #0c1a3f !important;
+}
+
+.filters label {
+    margin: 1rem;
+    width: 100%;
+}
+
+section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 1rem;
+}
+
+.info-index {
+    width: 50%;
+}
+
+#congress {
+    width: 80%;
+    border-radius: 5%;
+}
+
+footer {
+    margin-top: 2rem;
+    background-color: #0c1a3f;
+    color: white;
+    align-items: center;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
