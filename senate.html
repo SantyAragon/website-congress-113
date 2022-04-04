@@ -8,10 +8,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/custom.css">
-    <title>Congreso</title>
+    <title>Senate</title>
 </head>
 
-<body>
+<body class="d-flex flex-column justify-content-between">
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <img src="./assets/logo.png" alt="logo">
@@ -20,9 +20,9 @@
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse show" id="navbarNavAltMarkup">
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-
+                <a class="mail2 d-lg-none p-3" href="mailto:info@datainsight.net">info@DataInsightGroup.net</a>
                 <div class="dropdown">
                     <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
                         aria-expanded="false">
@@ -48,7 +48,7 @@
 
 
     <form action="">
-        <fieldset class="d-flex align-items-center">
+        <fieldset class="d-flex align-items-center flex-wrap">
             <div class="filters d-flex align-items-center">
                 <label class="form-check form-switch">Republican
                     <input type="checkbox" class="form-check-input" role="switch" value="R">
@@ -60,7 +60,7 @@
                     <input type="checkbox" class="form-check-input" role="switch" value="ID">
                 </label>
             </div>
-            <div>
+            <div class="p-3">
                 <select name='states'>
                     <option value="all">All</option>
                 </select>

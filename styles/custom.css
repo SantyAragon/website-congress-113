@@ -6,6 +6,26 @@ body {
 
 }
 
+@media only screen and (max-width:992px) {
+    .filters {
+        flex-wrap: wrap;
+    }
+
+    .mail {
+        display: none;
+    }
+    section{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center !important;
+        text-align: center;
+        width: 100%;
+    }
+    #congress{
+        margin: 1rem 0px;
+    }
+}
+
 .bg-light {
     /* color: white; */
     background-color: #d61f49 !important;
