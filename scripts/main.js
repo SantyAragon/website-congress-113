@@ -13,7 +13,6 @@ const imprimirNombres = (data) => data.results[0].members.forEach(element =>
 
 // imprimirEstados(data);
 
-
 const estadosOrdenados = (senateData) => {
     let estadosFiltrados = [];
     senateData.results[0].members.forEach(element => {
