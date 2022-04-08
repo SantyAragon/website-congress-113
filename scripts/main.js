@@ -1,29 +1,38 @@
-const imprimirNombres = (data) => data.results[0].members.forEach(element =>
-    console.table(`${element.first_name} ${element.last_name}`));
+let chamber = document.querySelector("#table-senate") ? "senate" : "house"
+let UrlAPI = `https://api.propublica.org/congress/v1/113/${chamber}/members.json`
+
+let init = {
+    method: "GET",
+    headers: {
+        "X-API-Key": "ayEQKIOE9pPw2ACZf9laT7NHVztG9hZ5no8SiYsr"
+    }
+}
+
+let loading = document.querySelector("#loader-container")
+
+let data = []
+fetch(UrlAPI, init)
+    .then(response => response.json())
+    .then(contenidoDeJson => {
+        data = contenidoDeJson.results[0].members
+        renderSelect(estadosOrdenados(data));
+        renderNames(data);
+        loading.classList.add("loader-desactive");
+
+    })
+    .catch(error => console.warn(error.message))
 
 // imprimirNombres(data)
 
-//EJERCICIO C
-
-// var aux2 = senateData.results[0].members.map(element => element.state);
-// let aux2 = [];
-// console.log(aux2);
-// const imprimirEstados = (senateData) => senateData.results[0].members.filter(element => (!aux2.includes(element.state)))
-
-
-// imprimirEstados(data);
-
 const estadosOrdenados = (senateData) => {
     let estadosFiltrados = [];
-    senateData.results[0].members.forEach(element => {
+    senateData.forEach(element => {
         if (!estadosFiltrados.includes(element.state)) {
             estadosFiltrados.push(element.state);
         }
     })
     return estadosFiltrados.sort()
 }
-
-// console.log(estadosOrdenados(data))
 
 // EJERCICIO D
 const showForParty = (array, partido) => array.results[0].members.filter(element => element.party === partido)
@@ -49,7 +58,7 @@ const renderNames = (array) => {
     array.forEach((member) => {
         let listMember = document.createElement("tr")
 
-        listMember.innerHTML = ` <td><a href="https://www.${member.last_name}${member.first_name}.com">
+        listMember.innerHTML = `<td><a href="https://www.${member.last_name}${member.first_name}.com">
         ${member.last_name}
                 ${member.middle_name ? member.middle_name : " "} 
                 ${member.first_name} </a></td>
@@ -71,20 +80,21 @@ function renderSelect(array) {
         select.appendChild(options)
     })
 }
-renderSelect(estadosOrdenados(data))
+// renderSelect(estadosOrdenados(data));
 
 function filtrarPorEstado(array, condition) {
     let filtradosPorEstado = [];
     if (condition === "all") {
-        filtradosPorEstado = array.results[0].members
+        filtradosPorEstado = array
     } else {
-        filtradosPorEstado = array.results[0].members.filter(member => member.state == condition)
+        filtradosPorEstado = array.filter(member => member.state == condition)
     }
     return filtradosPorEstado
 }
 
-form.addEventListener("change", () => {
+form.addEventListener("change", actualizarForm)
 
+function actualizarForm() {
     let checkboxes = form.querySelectorAll("input[type='checkbox']")
     let arrayCheckboxes = Array.from(checkboxes)
     let checkboxesSeleccionados = arrayCheckboxes.filter(checkbox => checkbox.checked)
@@ -103,6 +113,4 @@ form.addEventListener("change", () => {
         }
     }
     filtrarPartidos(filtrarPorEstado(data, opcionSeleccionada));
-})
-
-renderNames(data.results[0].members);
+}
