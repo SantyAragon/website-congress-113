@@ -29,9 +29,7 @@ body {
     }
 }
 
-.section-tables {
-    padding: 0px 1rem;
-}
+
 
 .bg-light {
     /* color: white; */
@@ -80,7 +78,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-left: 1rem;
+    padding:3rem 2rem;
 }
 
 .info-index {
